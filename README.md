@@ -13,6 +13,10 @@ Development tools:
 * [Visual studio code](https://code.visualstudio.com/) and its extensions like:
   + C/C++ Extensions Pack
   + Live Share Extension Pack
+
+Other tools:
+* [flowgorithm](http://www.flowgorithm.org/) (downloads available [installer](http://www.flowgorithm.org/download/files/Flowgorithm-Setup.zip) or [executable](http://www.flowgorithm.org/download/files/Flowgorithm-exe-only.zip))
+
 ## List of examples
 Here you will find all the examples provided during the course.
 
@@ -20,6 +24,11 @@ Here you will find all the examples provided during the course.
 | example                   | topic                                          |
 | ------------------------- | ---------------------------------------------- |
 | [test.c](examples/test.c) | a program to test your development environment |
+| [base.c](examples/base.c) | basic program                                  |
+| [vars.c](examples/vars.c) | basic variable declarations and usage          |
+| [out.c](examples/out.c)   | basic output to stdout                         |
+| [in.c](examples/in.c)     | basic input from stdin                         |
+
 ## List of exercises
 Here you will find *some* of the exercises assigned during the course and *probably* their solutions.
 
