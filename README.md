@@ -21,13 +21,14 @@ Other tools:
 Here you will find all the examples provided during the course.
 
 **Feel absolutely free to make them part of your work.**
-| example                   | topic                                          |
-| ------------------------- | ---------------------------------------------- |
-| [test.c](examples/test.c) | a program to test your development environment |
-| [base.c](examples/base.c) | basic program                                  |
-| [vars.c](examples/vars.c) | basic variable declarations and usage          |
-| [out.c](examples/out.c)   | basic output to stdout                         |
-| [in.c](examples/in.c)     | basic input from stdin                         |
+| example                                   | topic                                          |
+| ----------------------------------------- | ---------------------------------------------- |
+| [test.c](examples/test.c)                 | a program to test your development environment |
+| [base.c](examples/base.c)                 | basic program                                  |
+| [vars.c](examples/vars.c)                 | basic variable declarations and usage          |
+| [out.c](examples/out.c)                   | basic output to stdout                         |
+| [in.c](examples/in.c)                     | basic input from stdin                         |
+| [selezione_if.c](examples/selezione_if.c) | if - else                                      |
 
 ## List of exercises
 Here you will find *some* of the exercises assigned during the course and *probably* their solutions.
