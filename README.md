@@ -29,10 +29,11 @@ Here you will find all the examples provided during the course.
 | [out.c](examples/out.c)                   | basic output to stdout                         |
 | [in.c](examples/in.c)                     | basic input from stdin                         |
 | [selezione_if.c](examples/selezione_if.c) | if - else                                      |
+| [loops_while.c](examples/loops_while.c)   | loops: while                                   |
 
 ## List of exercises
 Here you will find *some* of the exercises assigned during the course and *probably* their solutions.
 
-| exercise       | solution     |
-| -------------- | ------------ |
-| nothing so far | not provided |
+| exercise                        | solution                    |
+| ------------------------------- | --------------------------- |
+| [bridges](exercises/bridges.md) | [here](solutions/bridges.c) |
