@@ -31,6 +31,7 @@ Here you will find all the examples provided during the course.
 | [selezione_if.c](examples/selezione_if.c)     | if - else                                      |
 | [loops_while.c](examples/loops_while.c)       | loops: while                                   |
 | [loops_do-while.c](examples/loops_do-while.c) | loops: do-while                                |
+| [data.c](examples/data.c)                     | do-while used to read and check a date         |
 
 ## List of exercises
 Here you will find *some* of the exercises assigned during the course and *probably* their solutions.
