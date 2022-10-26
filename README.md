@@ -39,5 +39,5 @@ Here you will find *some* of the exercises assigned during the course and *proba
 | exercise                        | solution                    |
 | ------------------------------- | --------------------------- |
 | [bridges](exercises/bridges.md) | [here](solutions/bridges.c) |
-| [cifre](exercises/cifre.md)     | not provided yet            |
-| [base](exercises/base.md)       | not provided yet            |
+| [cifre](exercises/cifre.md)     | [here](solutions/cifre.c)   |
+| [base](exercises/base.md)       | [here](solutions/base.c)    |
