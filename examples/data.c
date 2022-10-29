@@ -72,7 +72,7 @@ int main(int argc, char *args[])
     } while (!valido);
     printf("La data accettata e': %02d/%02d/%04d \n", giorno, mese, anno);
     // data come numero AAAAMMGG
-    // (in quest'ordine perché così posso confrontare date come numero)
+    // (in quest'ordine perché così posso confrontare date come numeri)
     int data = ((anno * 100) + mese) * 100 + giorno;
     printf("La data numerica e': %08d \n", data);
 

@@ -32,6 +32,10 @@ Here you will find all the examples provided during the course.
 | [loops_while.c](examples/loops_while.c)       | loops: while                                   |
 | [loops_do-while.c](examples/loops_do-while.c) | loops: do-while                                |
 | [data.c](examples/data.c)                     | do-while used to read and check a date         |
+| [functions.cpp](examples/functions.cpp)       | Esempio di functions in C++                    |
+| [MCDfunctions.c](examples/MCDFunctions.c)     | Esempio di functions in C                      |
+| [MCDfunctions.cpp](examples/MCDFunctions.cpp) | Esempio di functions in C++                    |
+
 
 ## List of exercises
 Here you will find *some* of the exercises assigned during the course and *probably* their solutions.
