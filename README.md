@@ -40,8 +40,11 @@ Here you will find all the examples provided during the course.
 ## List of exercises
 Here you will find *some* of the exercises assigned during the course and *probably* their solutions.
 
-| exercise                        | solution                    |
-| ------------------------------- | --------------------------- |
-| [bridges](exercises/bridges.md) | [here](solutions/bridges.c) |
-| [cifre](exercises/cifre.md)     | [here](solutions/cifre.c)   |
-| [base](exercises/base.md)       | [here](solutions/base.c)    |
+| exercise                          | solution                     |
+| --------------------------------- | ---------------------------- |
+| [bridges](exercises/bridges.md)   | [here](solutions/bridges.c)  |
+| [cifre](exercises/cifre.md)       | [here](solutions/cifre.c)    |
+| [base](exercises/base.md)         | [here](solutions/base.c)     |
+| [scomponi](exercises/scomponi.md) | [here](solutions/scomponi.c) |
+| [divisori](exercises/divisori.md) | [here](solutions/divisori.c) |
+| [power](exercises/power.md)       | [here](solutions/power.cpp)  |
