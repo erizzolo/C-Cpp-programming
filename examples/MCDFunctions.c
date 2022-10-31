@@ -13,7 +13,7 @@
 
 int getPositiveInt(const char *nome); // read a positive int from the keyboard
 
-int MCD(int a, int b);                // compute MCD (GCD) of two int
+int MCD(int a, int b); // compute MCD (GCD) of two int
 // DIFF !!!
 // la seguente dichiarazione è consentita solo in C++
 // int MCD(int a, int b, int c); // Ok in C++: diversa lista parametri
