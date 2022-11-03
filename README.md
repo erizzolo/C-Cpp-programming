@@ -40,11 +40,17 @@ Here you will find all the examples provided during the course.
 ## List of exercises
 Here you will find *some* of the exercises assigned during the course and *probably* their solutions.
 
-| exercise                          | solution                     |
-| --------------------------------- | ---------------------------- |
-| [bridges](exercises/bridges.md)   | [here](solutions/bridges.c)  |
-| [cifre](exercises/cifre.md)       | [here](solutions/cifre.c)    |
-| [base](exercises/base.md)         | [here](solutions/base.c)     |
-| [scomponi](exercises/scomponi.md) | [here](solutions/scomponi.c) |
-| [divisori](exercises/divisori.md) | [here](solutions/divisori.c) |
-| [power](exercises/power.md)       | [here](solutions/power.cpp)  |
+| exercise                                                  | solution                                   |
+| --------------------------------------------------------- | ------------------------------------------ |
+| [bridges](exercises/bridges.md)                           | [here](solutions/bridges.c)                |
+| [cifre](exercises/cifre.md)                               | [here](solutions/cifre.c)                  |
+| [base](exercises/base.md)                                 | [here](solutions/base.c)                   |
+| [scomponi](exercises/scomponi.md)                         | [here](solutions/scomponi.c)               |
+| [divisori](exercises/divisori.md)                         | [here](solutions/divisori.c)               |
+| [power](exercises/power.md)                               | [here](solutions/power.cpp)                |
+| [maxDivisore](exercises/maxDivisore.md)                   | [here](solutions/maxDivisore.cpp)          |
+| [twoPrimes](exercises/twoPrimes.md)                       | [here](solutions/twoPrimes.cpp)            |
+| [perfectNumber](exercises/perfectNumber.md)               | [here](solutions/perfectNumber.cpp)        |
+| [maxIntValues](exercises/maxIntValues.md)                 | [here](solutions/maxIntValues.cpp)         |
+| [maxLongLongIntValues](exercises/maxLongLongIntValues.md) | [here](solutions/maxLongLongIntValues.cpp) |
+| [maxUIntValues](exercises/maxUIntValues.md)               | [here](solutions/maxUIntValues.cpp)        |
