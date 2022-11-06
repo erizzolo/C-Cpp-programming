@@ -54,3 +54,14 @@ Here you will find *some* of the exercises assigned during the course and *proba
 | [maxIntValues](exercises/maxIntValues.md)                 | [here](solutions/maxIntValues.cpp)         |
 | [maxLongLongIntValues](exercises/maxLongLongIntValues.md) | [here](solutions/maxLongLongIntValues.cpp) |
 | [maxUIntValues](exercises/maxUIntValues.md)               | [here](solutions/maxUIntValues.cpp)        |
+
+## List of solutions of lab tests
+Here you will find *some* of the lab test solutions.
+
+The text of the problem is inside the source file.
+
+* [multipli.cpp](tests/multipli.cpp)
+* [prodotto.cpp](tests/prodotto.cpp)
+* [comuni.cpp](tests/comuni.cpp)
+* [esclusivi.cpp](tests/esclusivi.cpp)
+* [residuo.cpp](tests/residuo.cpp)
