@@ -54,6 +54,8 @@ Here you will find *some* of the exercises assigned during the course and *proba
 | [maxIntValues](exercises/maxIntValues.md)                 | [here](solutions/maxIntValues.cpp)         |
 | [maxLongLongIntValues](exercises/maxLongLongIntValues.md) | [here](solutions/maxLongLongIntValues.cpp) |
 | [maxUIntValues](exercises/maxUIntValues.md)               | [here](solutions/maxUIntValues.cpp)        |
+| [primo](exercises/primo.md)                               | [here](solutions/primo.cpp)                |
+| [bertrand](exercises/bertrand.md)                         | [here](solutions/bertrand.cpp)             |
 
 ## List of solutions of lab tests
 Here you will find *some* of the lab test solutions.
