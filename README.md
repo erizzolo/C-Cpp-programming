@@ -21,21 +21,23 @@ Other tools:
 Here you will find all the examples provided during the course.
 
 **Feel absolutely free to make them part of your work.**
-| example                                       | topic                                          |
-| --------------------------------------------- | ---------------------------------------------- |
-| [test.c](examples/test.c)                     | a program to test your development environment |
-| [base.c](examples/base.c)                     | basic program                                  |
-| [vars.c](examples/vars.c)                     | basic variable declarations and usage          |
-| [out.c](examples/out.c)                       | basic output to stdout                         |
-| [in.c](examples/in.c)                         | basic input from stdin                         |
-| [io.cpp](examples/io.cpp)                     | I/O using iostream from stdin                  |
-| [selezione_if.c](examples/selezione_if.c)     | if - else                                      |
-| [loops_while.c](examples/loops_while.c)       | loops: while                                   |
-| [loops_do-while.c](examples/loops_do-while.c) | loops: do-while                                |
-| [data.c](examples/data.c)                     | do-while used to read and check a date         |
-| [functions.cpp](examples/functions.cpp)       | Esempio di functions in C++                    |
-| [MCDfunctions.c](examples/MCDFunctions.c)     | Esempio di functions in C                      |
-| [MCDfunctions.cpp](examples/MCDFunctions.cpp) | Esempio di functions in C++                    |
+| example                                           | topic                                          |
+| ------------------------------------------------- | ---------------------------------------------- |
+| [test.c](examples/test.c)                         | a program to test your development environment |
+| [base.c](examples/base.c)                         | basic program                                  |
+| [vars.c](examples/vars.c)                         | basic variable declarations and usage          |
+| [out.c](examples/out.c)                           | basic output to stdout                         |
+| [in.c](examples/in.c)                             | basic input from stdin                         |
+| [io.cpp](examples/io.cpp)                         | I/O using iostream from stdin                  |
+| [selezione_if.c](examples/selezione_if.c)         | if - else                                      |
+| [selezione_switch.c](examples/selezione_switch.c) | switch                                         |
+| [loops_while.c](examples/loops_while.c)           | loops: while                                   |
+| [loops_do-while.c](examples/loops_do-while.c)     | loops: do-while                                |
+| [loops_for.c](examples/loops_for.c)               | loops: for                                     |
+| [data.c](examples/data.c)                         | do-while used to read and check a date         |
+| [functions.cpp](examples/functions.cpp)           | Esempio di functions in C++                    |
+| [MCDfunctions.c](examples/MCDFunctions.c)         | Esempio di functions in C                      |
+| [MCDfunctions.cpp](examples/MCDFunctions.cpp)     | Esempio di functions in C++                    |
 
 
 ## List of exercises
