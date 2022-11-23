@@ -59,6 +59,7 @@ Here you will find *some* of the exercises assigned during the course and *proba
 | [maxUIntValues](exercises/maxUIntValues.md)               | [here](solutions/maxUIntValues.cpp)        |
 | [primo](exercises/primo.md)                               | [here](solutions/primo.cpp)                |
 | [bertrand](exercises/bertrand.md)                         | [here](solutions/bertrand.cpp)             |
+| Functions relative alle date                              | [here](examples/dateExercise.cpp)          |
 
 ## List of solutions of lab tests
 Here you will find *some* of the lab test solutions.
