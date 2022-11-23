@@ -37,7 +37,8 @@ Here you will find all the examples provided during the course.
 | [data.c](examples/data.c)                         | do-while used to read and check a date         |
 | [functions.cpp](examples/functions.cpp)           | Esempio di functions in C++                    |
 | [MCDfunctions.c](examples/MCDFunctions.c)         | Esempio di functions in C                      |
-| [MCDfunctions.cpp](examples/MCDFunctions.cpp)     | Esempio di functions in C++                    |
+| [array.cpp](examples/array.cpp)                   | arrays: basic declaration and initialization   |
+| [array_basic.cpp](examples/array_basic.cpp)       | arrays: basic scan forward and backward        |
 
 
 ## List of exercises
@@ -59,7 +60,7 @@ Here you will find *some* of the exercises assigned during the course and *proba
 | [maxUIntValues](exercises/maxUIntValues.md)               | [here](solutions/maxUIntValues.cpp)        |
 | [primo](exercises/primo.md)                               | [here](solutions/primo.cpp)                |
 | [bertrand](exercises/bertrand.md)                         | [here](solutions/bertrand.cpp)             |
-| Functions relative alle date                              | [here](examples/dateExercise.cpp)          |
+| Functions relative alle date                              | [here](solutions/dateExercise.cpp)         |
 
 ## List of solutions of lab tests
 Here you will find *some* of the lab test solutions.
