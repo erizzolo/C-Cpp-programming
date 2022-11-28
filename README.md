@@ -62,6 +62,9 @@ Here you will find *some* of the exercises assigned during the course and *proba
 | [primo](exercises/primo.md)                               | [here](solutions/primo.cpp)                |
 | [bertrand](exercises/bertrand.md)                         | [here](solutions/bertrand.cpp)             |
 | Functions relative alle date                              | [here](solutions/dateExercise.cpp)         |
+| [cubes](exercises/cubes.md)                               | [here](solutions/cubes.cpp)                |
+| [guess](exercises/guess.md)                               | [1.here](solutions/youguess.cpp)           |
+| [guess](exercises/guess.md)                               | [2.here](solutions/iguess.cpp)             |
 
 ## List of solutions of lab tests
 Here you will find *some* of the lab test solutions.
