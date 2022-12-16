@@ -39,6 +39,7 @@ Here you will find all the examples provided during the course.
 | [MCDfunctions.c](examples/MCDFunctions.c)         | Esempio di functions in C                      |
 | [array.cpp](examples/array.cpp)                   | arrays: basic declaration and initialization   |
 | [array_basic.cpp](examples/array_basic.cpp)       | arrays: basic scan forward and backward        |
+| [array_utils.cpp](examples/array_utils.cpp)       | arrays: utility functions                      |
 | [pseudorandom.cpp](examples/pseudorandom.cpp)     | (pseudo)random numbers                         |
 
 
