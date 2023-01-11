@@ -77,3 +77,8 @@ The text of the problem is inside the source file.
 * [comuni.cpp](tests/comuni.cpp)
 * [esclusivi.cpp](tests/esclusivi.cpp)
 * [residuo.cpp](tests/residuo.cpp)
+* [andamento.cpp](tests/andamento.cpp)
+* [maxsalita.cpp](tests/maxsalita.cpp)
+* [megarand.cpp](tests/megarand.cpp)
+* [minirand.cpp](tests/minirand.cpp)
+* [progressione.cpp](tests/progressione.cpp)
