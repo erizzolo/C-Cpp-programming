@@ -66,6 +66,10 @@ Here you will find *some* of the exercises assigned during the course and *proba
 | [cubes](exercises/cubes.md)                               | [here](solutions/cubes.cpp)                |
 | [guess](exercises/guess.md)                               | [1.here](solutions/youguess.cpp)           |
 | [guess](exercises/guess.md)                               | [2.here](solutions/iguess.cpp)             |
+| [ordinato](exercises/ordinato.md)                         | [here](solutions/ordinato.cpp)             |
+| [rotazioni](exercises/rotazioni.md)                       | [here](solutions/rotazioni.cpp)            |
+| [isqrt](exercises/isqrt.md)                               | [here](solutions/isqrt.cpp)                |
+| [monteCarlo](exercises/monteCarlo.md)                     | [here](solutions/monteCarlo.cpp)           |
 
 ## List of solutions of lab tests
 Here you will find *some* of the lab test solutions.
