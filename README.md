@@ -86,3 +86,7 @@ The text of the problem is inside the source file.
 * [megarand.cpp](tests/megarand.cpp)
 * [minirand.cpp](tests/minirand.cpp)
 * [progressione.cpp](tests/progressione.cpp)
+* [powers.cpp](tests/powers.cpp)
+* [remainders.cpp](tests/remainders.cpp)
+* [multiples.cpp](tests/multiples.cpp)
+* [arraycontrol.cpp](tests/arraycontrol.cpp)
