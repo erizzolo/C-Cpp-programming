@@ -41,6 +41,7 @@ Here you will find all the examples provided during the course.
 | [array_basic.cpp](examples/array_basic.cpp)       | arrays: basic scan forward and backward        |
 | [array_utils.cpp](examples/array_utils.cpp)       | arrays: utility functions                      |
 | [pseudorandom.cpp](examples/pseudorandom.cpp)     | (pseudo)random numbers                         |
+| [cstring.cpp](examples/cstring.cpp)               | C-style strings of chars                       |
 
 
 ## List of exercises
