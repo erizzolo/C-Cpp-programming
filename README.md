@@ -42,7 +42,7 @@ Here you will find all the examples provided during the course.
 | [array_utils.cpp](examples/array_utils.cpp)       | arrays: utility functions                      |
 | [pseudorandom.cpp](examples/pseudorandom.cpp)     | (pseudo)random numbers                         |
 | [cstring.cpp](examples/cstring.cpp)               | C-style strings of chars                       |
-
+| [string_utils.cpp](examples/string_utils.cpp)     | C-style string functions                       |
 
 ## List of exercises
 Here you will find *some* of the exercises assigned during the course and *probably* their solutions.
