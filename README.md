@@ -71,6 +71,9 @@ Here you will find *some* of the exercises assigned during the course and *proba
 | [rotazioni](exercises/rotazioni.md)                       | [here](solutions/rotazioni.cpp)            |
 | [isqrt](exercises/isqrt.md)                               | [here](solutions/isqrt.cpp)                |
 | [monteCarlo](exercises/monteCarlo.md)                     | [here](solutions/monteCarlo.cpp)           |
+| [lowertri](exercises/lowertri.md)                         | [here](solutions/lowertri.cpp)             |
+| [uppertri](exercises/uppertri.md)                         | [here](solutions/uppertri.cpp)             |
+| [assemblea](exercises/assemblea.md)                       | [here](solutions/assemblea.cpp)            |
 
 ## List of solutions of lab tests
 Here you will find *some* of the lab test solutions.
