@@ -43,6 +43,7 @@ Here you will find all the examples provided during the course.
 | [pseudorandom.cpp](examples/pseudorandom.cpp)     | (pseudo)random numbers                         |
 | [cstring.cpp](examples/cstring.cpp)               | C-style strings of chars                       |
 | [string_utils.cpp](examples/string_utils.cpp)     | C-style string functions                       |
+| [struct.cpp](examples/struct.cpp)                 | structs                                        |
 
 ## List of exercises
 Here you will find *some* of the exercises assigned during the course and *probably* their solutions.
@@ -74,6 +75,8 @@ Here you will find *some* of the exercises assigned during the course and *proba
 | [lowertri](exercises/lowertri.md)                         | [here](solutions/lowertri.cpp)             |
 | [uppertri](exercises/uppertri.md)                         | [here](solutions/uppertri.cpp)             |
 | [assemblea](exercises/assemblea.md)                       | [here](solutions/assemblea.cpp)            |
+| diffprod                                                  | [here](solutions/diffprod.cpp)             |
+| actv                                                      | [here](solutions/actv.cpp)                 |
 
 ## List of solutions of lab tests
 Here you will find *some* of the lab test solutions.
