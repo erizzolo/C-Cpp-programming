@@ -44,6 +44,8 @@ Here you will find all the examples provided during the course.
 | [cstring.cpp](examples/cstring.cpp)               | C-style strings of chars                       |
 | [string_utils.cpp](examples/string_utils.cpp)     | C-style string functions                       |
 | [struct.cpp](examples/struct.cpp)                 | structs                                        |
+| [ds_intro.md](examples/ds_intro.md)               | Introduction to data structures                |
+| [data_structures.md](examples/data_structures.md) | Dynamic and static data structures (summary)   |
 
 ## List of exercises
 Here you will find *some* of the exercises assigned during the course and *probably* their solutions.
