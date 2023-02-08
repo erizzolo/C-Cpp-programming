@@ -47,6 +47,20 @@ Here you will find all the examples provided during the course.
 | [ds_intro.md](examples/ds_intro.md)               | Introduction to data structures                |
 | [data_structures.md](examples/data_structures.md) | Dynamic and static data structures (summary)   |
 
+
+## Further information (approfondimenti)
+Here you will find further information if you want a deeper insight.
+
+**You are free to skip all this...**
+
+**Feel absolutely free to make them part of your work.**
+| example                                                    | topic                                        |
+| ---------------------------------------------------------- | -------------------------------------------- |
+| [arraymD.cpp](further/arraymD.cpp)                         | multidimensional arrays example              |
+| [array2Dcache.cpp](further/array2Dcache.cpp)               | multidimensional arrays and cache            |
+| [arrays_allocation.cpp](further/arrays_allocation.cpp)     | multidimensional arrays allocation           |
+| [operators_functions.cpp](further/operators_functions.cpp) | operator overloading and function parameters |
+
 ## List of exercises
 Here you will find *some* of the exercises assigned during the course and *probably* their solutions.
 
