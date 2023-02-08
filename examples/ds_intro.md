@@ -10,7 +10,6 @@ Ad esempio, per il linguaggio C/C++, gli *array* e le *struct*.
 In altri casi, le strutture dati hanno una specifica logica indipendente dalla memorizzazione fisica: si definiscono in questi casi strutture dati **astratte**: esse possono essere implementate in diverso modo, senza alcuna corrispondenza particolare ad una disposizione fisica dei dati in memoria.
 
 ## Caratteristiche generali
-
 Per una data struttura, in un dato istante temporale, si definiscono:
 
 | Termine  | Significato                    | Note                                                             |
@@ -19,7 +18,12 @@ Per una data struttura, in un dato istante temporale, si definiscono:
 | capacity | numero di elementi contenibili | massimo valore di *size* in un dato istante                      |
 
 Il *size* di una struttura dati varia generalmente durante la vita della struttura, da un minimo di 0 (struttura vuota) ad un massimo di *capacity*.
-Le strutture dati in cui *capacity* rimane costante dall'inzio alla fine della vita della struttura sono definite **statiche**, mentre quelle in cui *capacity* puù variare durante la vita della struttura sono definite **dinamiche**.
+Le strutture dati in cui *capacity* rimane costante dall'inzio alla fine della vita della struttura sono definite **statiche**, mentre quelle in cui *capacity* può variare durante la vita della struttura sono definite **dinamiche**.
+### Altre caratteristiche
+Altre caratteristiche che distinguono le varie strutture dati e le rendono più o meno adatte a particolari scopi sono:
+* **duplicati** ammessi/proibiti
+* eventuale **ordinamento** degli elementi
+* possibilità di **aggiornamento** degli elementi
 ## Operazioni
 Distinguiamo tra operazioni di tipo informativo (che non modificano la struttura) ed operativo (che modificano la struttura).
 > nelle operazioni, *s* indica una struttura, *e* un elemento.
@@ -70,10 +74,10 @@ Ad es. se inserisco A, B, C, D, E poi estraggo A, B, C, D, E.
 
 Esempi di utilizzo:
 * per elaborare dati e richieste nell'ordine in cui sono stati generati;
-* algoritmi di esplorazione in cui è necessario procedere dal primo elemento trovato ed ai successivi nello stesso ordine con cui gli elementi sono stati trovati (DFS, ...).
+* algoritmi di esplorazione in cui è necessario procedere dal primo elemento trovato ed ai successivi nello stesso ordine con cui gli elementi sono stati trovati (BFS, ...).
 
 ### Dequeue (deck)
 
-Struttura dati lineare in cui inserimento e rimozione avvengono ad estremità decise dal programma.
+Struttura dati lineare in cui inserimento e rimozione possono avvenire ad entrambe le estremità.
 
-Si tratta di un ageneralizzazione delle strutture vise in precedenza.
+Si tratta di una generalizzazione delle strutture vise in precedenza.
