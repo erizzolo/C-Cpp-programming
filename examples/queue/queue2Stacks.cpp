@@ -8,7 +8,7 @@
 
 /**
  * The idea is to use two stacks, one for insertion and one for removal,
- * decant from the first into the second as needed.
+ * and decant from the first into the second as needed.
  */
 
 #include "stack.h"
@@ -17,7 +17,7 @@
 // definition of queue data type
 struct queue
 {
-    item data[CAPACITY]; // the actual data
+    // NOT USED!!! item data[CAPACITY]; // the actual data
     stack insertion;     // insertion stack (reverse order)
     stack removal;       // removal stack (queue order)
 };
