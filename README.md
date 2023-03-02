@@ -48,7 +48,8 @@ Here you will find all the examples provided during the course.
 | [data_structures.md](examples/data_structures.md)   | Dynamic and static data structures (summary)   |
 | [recursive](examples/recursive.cpp)                 | Recursive functions                            |
 | [recursive products](examples/recursiveProduct.cpp) | Recursive product                              |
-
+| [array_vs_struct](examples/array_vs_struct.cpp)     | array vs struct comparison                     |
+| [array_vs_pointer](examples/array_vs_pointer.cpp)   | array vs pointer comparison                    |
 
 ## Further information (approfondimenti)
 Here you will find further information if you want a deeper insight.
