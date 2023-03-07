@@ -101,6 +101,7 @@ Here you will find *some* of the exercises assigned during the course and *proba
 | [maxFactors](exercises/maxFactors.md)                     | [here](solutions/maxfactors.cpp)           |
 | [scomposizione](exercises/scomposizione.md)               | [here](solutions/scomposizione.cpp)        |
 | [divisori](exercises/divisori2.md)                        | [here](solutions/divisori.cpp)             |
+| [date](exercises/date.md)                                 | [here](solutions/date.cpp)                 |
 
 ## List of solutions of lab tests
 Here you will find *some* of the lab test solutions.
@@ -121,3 +122,12 @@ The text of the problem is inside the source file.
 * [remainders.cpp](tests/remainders.cpp)
 * [multiples.cpp](tests/multiples.cpp)
 * [arraycontrol.cpp](tests/arraycontrol.cpp)
+* [geometria.h](tests/geometria.h) & [geometria.cpp](tests/geometria.cpp)
+* [frazioni.h](tests/frazioni.h) & [frazioni.cpp](tests/frazioni.cpp)
+* [periodo.h](tests/periodo.h) & [periodo.cpp](tests/periodo.cpp)
+* [range.h](tests/range.h) & [range.cpp](tests/range.cpp)
+* [cesare.cpp](tests/cesare.cpp)
+* [anagrammi.cpp](tests/anagrammi.cpp)
+* [distanza.cpp](tests/distanza.cpp)
+* [pascal.cpp](tests/pascal.cpp)
+
