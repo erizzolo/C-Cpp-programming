@@ -19,8 +19,8 @@ using item = int;
 #define CAPACITY 32
 
 // implementazione e completamento dichiarazioni
-#include "stackFLA.cpp"
-// #include "stackDA.cpp"
+// #include "stackFLA.cpp"
+#include "stackDA.cpp"
 
 #define DEBUG 1
 

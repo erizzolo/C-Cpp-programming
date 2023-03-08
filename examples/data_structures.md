@@ -6,12 +6,14 @@
 | --------- | ----------------------------------------------------------- | --------------------------------------------------------------------------- |
 | Stack     | [stackFLA.cpp](../examples/stack/stackFLA.cpp)              | statica, fixed length array                                                 |
 | Stack     | [stackDA.cpp](../examples/stack/stackDA.cpp)                | dinamica, puntatore a memoria dinamica                                      |
+| Stack     | [stackDANEW.cpp](../examples/stack/stackDANEW.cpp)          | dinamica, puntatore a memoria dinamica using new/delete                     |
 | Stack     | [stackSLL.cpp](../examples/stack/stackSLL.cpp)              | dinamica, come lista semplicemente concatenata                              |
 | Stack     | [stackFLAT.cpp](../examples/stack/template/stackFLA.cpp)    | statica, fixed length array, template                                       |
 | Stack     | [stackFLATI.cpp](../examples/stack/template/stackFLATI.cpp) | statica, fixed length array, template con operazioni interne                |
 | Stack     | [stackFLATC.cpp](../examples/stack/template/stackFLATC.cpp) | statica, fixed length array, template con operazioni interne e dati private |
 | Coda      | [queueFLA.cpp](../examples/queue/queueFLA.cpp)              | statica, fixed length array                                                 |
 | Coda      | [queueFLAC.cpp](../examples/queue/queueFLAC.cpp)            | statica, fixed length circular array                                        |
+| Coda      | [queueDA.cpp](../examples/queue/queueDA.cpp)                | dinamica, puntatore a memoria dinamica non circolare                        |
 | Coda      | [queueDAC.cpp](../examples/queue/queueDAC.cpp)              | dinamica, puntatore a memoria dinamica circolare                            |
 | Coda      | [queue2Stacks.cpp](../examples/queue/queue2Stacks.cpp)      | statica, tramite due stacks                                                 |
 | Coda      | [queueSLL.cpp](../examples/queue/queueSLL.cpp)              | dinamica, come lista semplicemente concatenata                              |
@@ -32,21 +34,21 @@ Abbiamo visto due implementazioni dello stack:
 Vediamo il caso della implementazione stackFLA:
 | nome          | tipo            | dimensione (B)              |
 | ------------- | --------------- | --------------------------- |
-| stackFLA      | struct          | 4 + CAPACITY * sizeof(item) |
+| stackFLA      | struct          | 8 + CAPACITY * sizeof(item) |
 | stackFLA.data | item [CAPACITY] | CAPACITY * sizeof(item)     |
-| stackFLA.size | int             | 4                           |
+| stackFLA.size | size_t          | 8                           |
 In questo caso i dati sono parte integrante della struct, la cui dimensione totale dipende dalla capacity.
 
 **Se si copia la struct, la copia contiene anch'essa i dati (duplicati) ed è indipendente dalla struct originale.**
 
 Vediamo il caso della implementazione stackDA:
-| nome             | tipo      | dimensione (B)     |
-| ---------------- | --------- | ------------------ |
-| stackDA          | struct    | 8 + sizeof(item *) |
-| stackDA.data     | item\*    | sizeof(item \*)    |
-| stackDA.capacity | int       | 4                  |
-| stackDA.size     | int       | 4                  |
-| *senza nome*     | *memoria* | *variabile*        |
+| nome             | tipo      | dimensione (B)      |
+| ---------------- | --------- | ------------------- |
+| stackDA          | struct    | 16 + sizeof(item *) |
+| stackDA.data     | item\*    | sizeof(item \*)     |
+| stackDA.capacity | size_t    | 8                   |
+| stackDA.size     | size_t    | 8                   |
+| *senza nome*     | *memoria* | *variabile*         |
 dove sizeof(item *) è la dimensione (4B o 8B) di un indirizzo.
 
 In questo caso i dati **non** sono parte integrante della struct, la cui dimensione totale **non** dipende dalla capacity, bensì sono situati altrove (allocati in memoria dinamica) all'indirizzo memorizzato nella struct.

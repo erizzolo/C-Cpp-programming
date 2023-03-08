@@ -47,7 +47,7 @@ struct queue
     item data[CAPACITY]; // the actual data
     size_t size{0};      // actual number of elements
     size_t insertion{0}; // actual insertion slot
-    // size_t removal{0};   // (insertion - size) % capacity
+    size_t removal{0};   // (insertion - size) % capacity
 };
 
 // basic operations
@@ -79,13 +79,13 @@ bool remove(queue &q, item &i)
     bool result = size(q) > 0; // not empty
     if (result)
     {
-        size_t removal; // removal position (circular)
-        if (q.insertion >= q.size)
-            removal = q.insertion - q.size;
-        else
-            removal = q.insertion + (capacity(q) - size(q));
-        i = q.data[removal]; // extract from first non-empty position
-        q.size--;            // one element less
+        i = q.data[q.removal];  // extract from first non-empty position
+        q.size--;               // one element less
+        q.removal++;            // next position (circular)
+        if (q.removal == capacity(q))
+        {
+            q.removal = 0;
+        }
     }
     return result;
 }
@@ -96,11 +96,7 @@ void print(const queue &q, ostream &out /* = cout */, bool newLine /* = true */)
 {
     out << "Queue{ ";
     out << size(q) << "/" << capacity(q) << ", first :";
-    size_t removal; // removal position (circular)
-    if (q.insertion >= q.size)
-        removal = q.insertion - q.size;
-    else
-        removal = q.insertion + (capacity(q) - size(q));
+    size_t removal = q.removal; // removal position (circular)
     for (size_t i = 0; i < size(q); i++)
     {
         // show element from first to last

@@ -18,7 +18,7 @@ struct node
 struct stack
 {
     node *top{nullptr}; // link to top node
-    size_t size{0};     // actual size of the stack (number of elements)
+    size_t size{0};     // actual size of the stack (number of elements), stored for efficiency
 };
 
 /*
@@ -36,6 +36,15 @@ struct stack
 size_t size(const stack &s)
 {
     return s.size;
+    // if we hadn't stored the size we should go through all the stack to the bottom
+    // size_t result = 0;
+    // node *current = s.top;
+    // while (current != nullptr)
+    // {
+    //     ++result;
+    //     current = current->next;
+    // }
+    // return result;
 }
 size_t capacity(const stack &s)
 {
