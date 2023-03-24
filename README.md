@@ -54,6 +54,7 @@ Here you will find all the examples provided during the course.
 | [alloc_Cpp_new_delete](examples/alloc_Cpp_new_delete.cpp) | memory allocation C++-style                    |
 | [args](examples/args.cpp)                                 | command line arguments                         |
 | [average](examples/average.cpp)                           | average of command line arguments              |
+| [fileIO.md](examples/fileIO.md)                           | File I/O examples (summary)                    |
 
 ## Further information (approfondimenti)
 Here you will find further information if you want a deeper insight.
