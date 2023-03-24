@@ -52,6 +52,8 @@ Here you will find all the examples provided during the course.
 | [alloc_C](examples/alloc_C.c)                             | memory allocation C-style                      |
 | [alloc_Cpp](examples/alloc_Cpp.cpp)                       | memory allocation C++ using C-style            |
 | [alloc_Cpp_new_delete](examples/alloc_Cpp_new_delete.cpp) | memory allocation C++-style                    |
+| [args](examples/args.cpp)                                 | command line arguments                         |
+| [average](examples/average.cpp)                           | average of command line arguments              |
 
 ## Further information (approfondimenti)
 Here you will find further information if you want a deeper insight.
