@@ -72,40 +72,42 @@ Here you will find further information if you want a deeper insight.
 ## List of exercises
 Here you will find *some* of the exercises assigned during the course and *probably* their solutions.
 
-| exercise                                                  | solution                                                          |
-| --------------------------------------------------------- | ----------------------------------------------------------------- |
-| [bridges](exercises/bridges.md)                           | [here](solutions/bridges.c)                                       |
-| [cifre](exercises/cifre.md)                               | [here](solutions/cifre.c)                                         |
-| [base](exercises/base.md)                                 | [here](solutions/base.c)                                          |
-| [scomponi](exercises/scomponi.md)                         | [here](solutions/scomponi.c)                                      |
-| [divisori](exercises/divisori.md)                         | [here](solutions/divisori.c)                                      |
-| [power](exercises/power.md)                               | [here](solutions/power.cpp)                                       |
-| [maxDivisore](exercises/maxDivisore.md)                   | [here](solutions/maxDivisore.cpp)                                 |
-| [twoPrimes](exercises/twoPrimes.md)                       | [here](solutions/twoPrimes.cpp)                                   |
-| [perfectNumber](exercises/perfectNumber.md)               | [here](solutions/perfectNumber.cpp)                               |
-| [maxIntValues](exercises/maxIntValues.md)                 | [here](solutions/maxIntValues.cpp)                                |
-| [maxLongLongIntValues](exercises/maxLongLongIntValues.md) | [here](solutions/maxLongLongIntValues.cpp)                        |
-| [maxUIntValues](exercises/maxUIntValues.md)               | [here](solutions/maxUIntValues.cpp)                               |
-| [primo](exercises/primo.md)                               | [here](solutions/primo.cpp)                                       |
-| [bertrand](exercises/bertrand.md)                         | [here](solutions/bertrand.cpp)                                    |
-| Functions relative alle date                              | [here](solutions/dateExercise.cpp)                                |
-| [cubes](exercises/cubes.md)                               | [here](solutions/cubes.cpp)                                       |
-| [guess](exercises/guess.md)                               | [1.here](solutions/youguess.cpp)                                  |
-| [guess](exercises/guess.md)                               | [2.here](solutions/iguess.cpp)                                    |
-| [ordinato](exercises/ordinato.md)                         | [here](solutions/ordinato.cpp)                                    |
-| [rotazioni](exercises/rotazioni.md)                       | [here](solutions/rotazioni.cpp)                                   |
-| [isqrt](exercises/isqrt.md)                               | [here](solutions/isqrt.cpp)                                       |
-| [monteCarlo](exercises/monteCarlo.md)                     | [here](solutions/monteCarlo.cpp)                                  |
-| [lowertri](exercises/lowertri.md)                         | [here](solutions/lowertri.cpp)                                    |
-| [uppertri](exercises/uppertri.md)                         | [here](solutions/uppertri.cpp)                                    |
-| [assemblea](exercises/assemblea.md)                       | [here](solutions/assemblea.cpp)                                   |
-| diffprod                                                  | [here](solutions/diffprod.cpp)                                    |
-| actv                                                      | [here](solutions/actv.cpp)                                        |
-| [maxFactors](exercises/maxFactors.md)                     | [here](solutions/maxfactors.cpp)                                  |
-| [scomposizione](exercises/scomposizione.md)               | [here](solutions/scomposizione.cpp)                               |
-| [divisori](exercises/divisori2.md)                        | [here](solutions/divisori.cpp)                                    |
-| [date](exercises/date.md)                                 | [here](solutions/date.cpp)                                        |
+| exercise                                                  | solution                                                      |
+| --------------------------------------------------------- | ------------------------------------------------------------- |
+| [bridges](exercises/bridges.md)                           | [here](solutions/bridges.c)                                   |
+| [cifre](exercises/cifre.md)                               | [here](solutions/cifre.c)                                     |
+| [base](exercises/base.md)                                 | [here](solutions/base.c)                                      |
+| [scomponi](exercises/scomponi.md)                         | [here](solutions/scomponi.c)                                  |
+| [divisori](exercises/divisori.md)                         | [here](solutions/divisori.c)                                  |
+| [power](exercises/power.md)                               | [here](solutions/power.cpp)                                   |
+| [maxDivisore](exercises/maxDivisore.md)                   | [here](solutions/maxDivisore.cpp)                             |
+| [twoPrimes](exercises/twoPrimes.md)                       | [here](solutions/twoPrimes.cpp)                               |
+| [perfectNumber](exercises/perfectNumber.md)               | [here](solutions/perfectNumber.cpp)                           |
+| [maxIntValues](exercises/maxIntValues.md)                 | [here](solutions/maxIntValues.cpp)                            |
+| [maxLongLongIntValues](exercises/maxLongLongIntValues.md) | [here](solutions/maxLongLongIntValues.cpp)                    |
+| [maxUIntValues](exercises/maxUIntValues.md)               | [here](solutions/maxUIntValues.cpp)                           |
+| [primo](exercises/primo.md)                               | [here](solutions/primo.cpp)                                   |
+| [bertrand](exercises/bertrand.md)                         | [here](solutions/bertrand.cpp)                                |
+| Functions relative alle date                              | [here](solutions/dateExercise.cpp)                            |
+| [cubes](exercises/cubes.md)                               | [here](solutions/cubes.cpp)                                   |
+| [guess](exercises/guess.md)                               | [1.here](solutions/youguess.cpp)                              |
+| [guess](exercises/guess.md)                               | [2.here](solutions/iguess.cpp)                                |
+| [ordinato](exercises/ordinato.md)                         | [here](solutions/ordinato.cpp)                                |
+| [rotazioni](exercises/rotazioni.md)                       | [here](solutions/rotazioni.cpp)                               |
+| [isqrt](exercises/isqrt.md)                               | [here](solutions/isqrt.cpp)                                   |
+| [monteCarlo](exercises/monteCarlo.md)                     | [here](solutions/monteCarlo.cpp)                              |
+| [lowertri](exercises/lowertri.md)                         | [here](solutions/lowertri.cpp)                                |
+| [uppertri](exercises/uppertri.md)                         | [here](solutions/uppertri.cpp)                                |
+| [assemblea](exercises/assemblea.md)                       | [here](solutions/assemblea.cpp)                               |
+| diffprod                                                  | [here](solutions/diffprod.cpp)                                |
+| actv                                                      | [here](solutions/actv.cpp)                                    |
+| [maxFactors](exercises/maxFactors.md)                     | [here](solutions/maxfactors.cpp)                              |
+| [scomposizione](exercises/scomposizione.md)               | [here](solutions/scomposizione.cpp)                           |
+| [divisori](exercises/divisori2.md)                        | [here](solutions/divisori.cpp)                                |
+| [date](exercises/date.md)                                 | [here](solutions/date.cpp)                                    |
 | [geometry](exercises/geometry.md)                         | [here](solutions/geometry.cpp) & [here](solutions/geometry.h) |
+| [calc](exercises/calc.md)                                 | [here](solutions/calc.cpp)                                    |
+| [book](exercises/book.md)                                 | [here](solutions/book.cpp)                                    |
 
 ## List of solutions of lab tests
 Here you will find *some* of the lab test solutions.
