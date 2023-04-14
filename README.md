@@ -55,6 +55,7 @@ Here you will find all the examples provided during the course.
 | [args](examples/args.cpp)                                 | command line arguments                         |
 | [average](examples/average.cpp)                           | average of command line arguments              |
 | [fileIO.md](examples/fileIO.md)                           | File I/O examples (summary)                    |
+| [bubblesort](examples/bubblesort.cpp)                     | BubbleSort derivation and optimization         |
 
 ## Further information (approfondimenti)
 Here you will find further information if you want a deeper insight.
