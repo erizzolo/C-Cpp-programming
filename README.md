@@ -136,4 +136,7 @@ The text of the problem is inside the source file.
 * [anagrammi.cpp](tests/anagrammi.cpp)
 * [distanza.cpp](tests/distanza.cpp)
 * [pascal.cpp](tests/pascal.cpp)
+* [password.cpp](tests/password.cpp)
+* [planet.cpp](tests/planet.cpp)
+* [menu.cpp](tests/menu.cpp)
 
