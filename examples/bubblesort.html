@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <title>Bubble sort</title>
+    <meta charset="UTF-8">
+    <style>
+        div {
+            width: 100%;
+            border: 3px ridge gray;
+        }
+
+        div span {
+            display: inline-block;
+            text-align: center;
+            width: 10%;
+        }
+
+        th {
+            width: 10%;
+        }
+
+        th:last-child {
+            width: 80%;
+        }
+
+        meter {
+            width: 80%;
+            background: none;
+        }
+
+        #view table {
+            width: 100%;
+            border: 3px ridge black;
+        }
+
+        .ordered {
+            background-color: green;
+        }
+
+        .checking {
+            background-color: red;
+        }
+
+        .swapping {
+            background-color: yellow;
+        }
+
+        .executing {
+            background-color: red;
+        }
+
+        progress {
+            width: 100%;
+        }
+
+        pre {
+            margin: 0;
+        }
+
+        #controls table {
+            width: 100%;
+        }
+
+        #controls table td.p5 {
+            width: 5%;
+        }
+
+        #controls table td.p10 {
+            width: 10%;
+        }
+
+        #controls table td.p15 {
+            width: 15%;
+        }
+
+        #controls table td.p30 {
+            width: 30%;
+        }
+    </style>
+    <script>
+        let debug = false; //true;
+        let array;
+        let nElements;
+        let comparisons = 0;
+        let swaps = 0;
+        let stato = { state: "NULL", nextState: "INIT", lastSwapped: 0, needChecking: nElements, slotToCheck: 1 };
+        let executing;
+        function enableControls(what) {
+            if (what) {
+                document.getElementById("view").style.visibility = "visible";
+                document.getElementById("controls").style.visibility = "visible";
+                document.getElementById("legenda").style.visibility = "visible";
+            }
+            document.getElementById("nElem").disabled = what;
+            document.getElementById("btnRandom").disabled = what;
+            document.getElementById("btnBest").disabled = what;
+            document.getElementById("btnWorst").disabled = what;
+            document.getElementById("btnStep").disabled = !what;
+            document.getElementById("btnAuto").disabled = !what;
+        }
+        function updateView() {
+            document.getElementById("comparisons").innerHTML = "" + comparisons;
+            document.getElementById("swaps").innerHTML = "" + swaps;
+            document.getElementById("status").innerHTML = "" + stato.state;
+            document.getElementById("progress").value = "" + nElements - stato.needChecking;
+            if (debug) document.getElementById("variables").innerHTML = " state:" + stato.state + ", nextState:" + stato.nextState + ", lastSwapped:" + stato.lastSwapped + ", needChecking:" + stato.needChecking + ", slotToCheck:" + stato.slotToCheck;
+        }
+        function show() {
+            let data = "<div><table><thead><tr><th>Index</th><th>Value</th><th>Content</th></thead></table></div>";
+            for (let elem = 0; elem < nElements; elem++) {
+                data += "<div id=\"slot" + elem + "\"><span>" + elem + "</span><span id=\"value" + elem + "\">" + array[elem] + "</span>";
+                data += "<meter min=\"0\" max=\"" + nElements + "\" value=\"" + array[elem] + "\" id=\"bar" + elem + "\"></meter></div>";
+            }
+            document.getElementById("show").innerHTML = data;
+        }
+        function create(type) {
+            nElements = parseInt(document.getElementById("nElem").value);
+            array = new Array(nElements);
+            if (type == 2) {
+                for (let elem = 0; elem < nElements; elem++) {
+                    array[elem] = nElements - elem;
+                }
+            } else {
+                for (let elem = 0; elem < nElements; elem++) {
+                    array[elem] = elem + 1;
+                }
+            }
+            if (type == 0) {
+                // shuffle
+                let pos = nElements;
+                while (pos > 1) {
+                    let chosen = Math.floor(Math.random() * pos);
+                    pos--;
+                    let temp = array[chosen];
+                    array[chosen] = array[pos];
+                    array[pos] = temp;
+                }
+            }
+            show();
+            stato = { state: "NULL", nextState: "INIT", lastSwapped: 0, needChecking: nElements, slotToCheck: 1 };
+            comparisons = 0;
+            swaps = 0;
+            document.getElementById("progress").max = "" + nElements - 1;
+            enableControls(true);
+            updateView();
+        }
+        function runIt() {
+            document.getElementById("btnStep").disabled = true;
+            document.getElementById("btnAuto").disabled = true;
+            doStep(true);
+        }
+
+        function doStep(auto) {
+            if (debug) alert("from " + stato.state + " to " + stato.nextState);
+            stato.state = stato.nextState;
+            if (executing != null) {
+                executing.className = "";
+            }
+            switch (stato.state) {
+                case "INIT":
+                    stato.needChecking = nElements;
+                    stato.nextState = "INITLAST";
+                    executing = document.getElementById("mainLoop");
+                    break;
+                case "MAINLOOPCOND":
+                    if (stato.needChecking > 1) {
+                        stato.nextState = "INITLAST";
+                    } else {
+                        stato.nextState = "DONE";
+                    }
+                    executing = document.getElementById("mainLoop");
+                    break;
+                case "MAINLOOPUPDATE":
+                    stato.needChecking = stato.lastSwapped;
+                    for (let e = stato.needChecking; e < nElements; e++) {
+                        document.getElementById("slot" + e).className = "ordered";
+                    }
+                    stato.nextState = "MAINLOOPCOND";
+                    executing = document.getElementById("mainLoop");
+                    break;
+                case "INITLAST":
+                    stato.lastSwapped = 0;
+                    stato.nextState = "CHECKLOOPINIT";
+                    executing = document.getElementById("initLastSwap");
+                    break;
+                case "CHECKLOOPINIT":
+                    stato.slotToCheck = 1;
+                    stato.nextState = "CHECKLOOPCOND";
+                    executing = document.getElementById("checkLoop");
+                    break;
+                case "CHECKLOOPCOND":
+                    if (stato.slotToCheck < stato.needChecking) {
+                        stato.nextState = "CHECKING";
+                    } else {
+                        stato.nextState = "MAINLOOPUPDATE";
+                    }
+                    executing = document.getElementById("checkLoop");
+                    break;
+                case "CHECKING":
+                    document.getElementById("slot" + (stato.slotToCheck - 1)).className = "checking";
+                    document.getElementById("slot" + stato.slotToCheck).className = "checking";
+                    executing = document.getElementById("check");
+                    stato.nextState = "CHECKED";
+                    break;
+                case "CHECKED":
+                    document.getElementById("slot" + (stato.slotToCheck - 1)).className = "";
+                    document.getElementById("slot" + stato.slotToCheck).className = "";
+                    if (array[stato.slotToCheck] < array[stato.slotToCheck - 1]) {
+                        document.getElementById("slot" + (stato.slotToCheck - 1)).className = "swapping";
+                        document.getElementById("slot" + stato.slotToCheck).className = "swapping";
+                        stato.nextState = "SWAPPING";
+                        executing = document.getElementById("swap");
+                    } else {
+                        stato.nextState = "CHECKLOOPUPDATE";
+                        executing = document.getElementById("checkLoop");
+                    }
+                    comparisons++;
+                    break;
+                case "CHECKLOOPUPDATE":
+                    stato.slotToCheck++;
+                    stato.nextState = "CHECKLOOPCOND";
+                    break;
+                case "SWAPPING":
+                    document.getElementById("slot" + (stato.slotToCheck - 1)).className = "";
+                    document.getElementById("slot" + stato.slotToCheck).className = "";
+                    let temp = array[stato.slotToCheck];
+                    array[stato.slotToCheck] = array[stato.slotToCheck - 1];
+                    array[stato.slotToCheck - 1] = temp;
+                    swaps++;
+                    document.getElementById("value" + stato.slotToCheck).innerHTML = "" + array[stato.slotToCheck];
+                    document.getElementById("bar" + stato.slotToCheck).value = "" + array[stato.slotToCheck];
+                    document.getElementById("value" + (stato.slotToCheck - 1)).innerHTML = "" + array[stato.slotToCheck - 1];
+                    document.getElementById("bar" + (stato.slotToCheck - 1)).value = "" + array[stato.slotToCheck - 1];
+                    stato.nextState = "UPDATELASTSWAP";
+                    executing = document.getElementById("updateLastSwap");
+                    break;
+                case "UPDATELASTSWAP":
+                    stato.lastSwapped = stato.slotToCheck;
+                    stato.nextState = "CHECKLOOPUPDATE";
+                    executing = document.getElementById("checkLoop");
+                    break;
+                case "DONE":
+                    for (let e = 0; e < nElements; e++) {
+                        document.getElementById("slot" + e).className = "ordered";
+                    }
+                    enableControls(false);
+                    executing = null;
+                    break;
+            }
+            if (executing != null) {
+                executing.className = "executing";
+            }
+            updateView();
+            if (auto) {
+                let delay = document.getElementById("delay").value;
+                if (stato.state != "DONE") setTimeout(function () { doStep(true); }, delay);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form method="post">
+        <fieldset id="setup">
+            <legend>Simulation setup</legend>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="nElem">Numero elementi:</label>
+                        </td>
+                        <td>
+                            <input class="required" type="number" name="nElem" id="nElem" min="1" max="25" value="6"
+                                required>
+                        </td>
+                        <td>
+                            <button type="button" id="btnRandom" onclick="create(0)">Random data</button>
+                        </td>
+                        <td>
+                            <button type="button" id="btnBest" onclick="create(1)">Best Case</button>
+                        </td>
+                        <td>
+                            <button type="button" id="btnWorst" onclick="create(2)">Worst Case</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+        <fieldset id="codice">
+            <legend>Code</legend>
+            <div id="mainLoop">
+                <code>for(int needChecking = elementi, lastSwap; needChecking > 1; needChecking = lastSwap) {</code>
+            </div>
+            <div id="initLastSwap">
+                <pre><code>    lastSwap = 0;</code></pre>
+            </div>
+            <div id="checkLoop">
+                <pre><code>     for(int check = 1; check &lt; needChecking; check++) {</code></pre>
+            </div>
+            <div id="check">
+                <pre><code>        if(array[check] &lt; array[check-1]) {</code></pre>
+            </div>
+            <div id="swap">
+                <pre><code>            swap(array[check], array[check-1]);</code></pre>
+            </div>
+            <div id="updateLastSwap">
+                <pre><code>            lastSwap = check;</code></pre>
+            </div>
+            <div id="endSwap">
+                <pre><code>       }</code></pre>
+            </div>
+            <div id="endCheck">
+                <pre><code>    }</code></pre>
+            </div>
+            <div id="endMain"><code>}</code></div>
+        </fieldset>
+        <fieldset id="view" style="visibility:hidden">
+            <legend>Simulation view</legend>
+            <div id="show">
+            </div>
+        </fieldset>
+        <fieldset id="controls" style="visibility:hidden">
+            <legend>Simulation controls</legend>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="p5"><button type="button" id="btnStep" onclick="doStep(false)">Step</button></td>
+                        <td class="p5"><button type="button" id="btnAuto" onclick="runIt()">Run</button></td>
+                        <td class="p15"><label for="delay">Delay:</label><input type="range" name="delay" id="delay"
+                                value="200" min="0" max="1000"></td>
+                        <td class="p10">Comparisons:</td>
+                        <td class="p5" id="comparisons">0</td>
+                        <td class="p5">Swaps:</td>
+                        <td class="p5" id="swaps">0</td>
+                        <td class="p5">Status:</td>
+                        <td class="p10" id="status"></td>
+                        <td class="p5">Progress:</td>
+                        <td class="p30"><progress id="progress" max="20" value="0">Percentuale</progress></td>
+                    </tr>
+                    <tr>
+                        <td id="variables" colspan="11"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+        <fieldset id="legenda" style="visibility:hidden">
+            <legend>Legenda</legend>
+            <div class="ordered">Elemento ordinato, in posizione definitiva</div>
+            <div class="checking">Elemento in fase di confronto</div>
+            <div class="swapping">Elementi in fase di scambio (in posizione relativa errata)</div>
+        </fieldset>
+    </form>
+</body>
+
+</html>

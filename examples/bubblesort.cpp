@@ -42,7 +42,7 @@ void JSON(const type a[], int end, int begin = 0, ostream &out = cout);         
 void iota(type a[], type value, int end, int begin = 0);                              // fill with increasing values
 void reverse(type a[], int end, int begin = 0);                                       // rovescia l'ordine degli elementi
 void fillRandom(type a[], int end, int begin = 0, type min = 0, type max = RAND_MAX); // a[i] = random in [min, max]
-void copia(const type a[], type c[], int end, int begin = 0);                          // copy (a range of) an array
+void copia(const type a[], type c[], int end, int begin = 0);                         // copy (a range of) an array
 
 // sorting functions
 bool isOrdered(const type a[], int end, int begin = 0);   // function to start with
@@ -53,7 +53,7 @@ void sortOptimizedBool(type a[], int end, int begin = 0); // full sorting, itera
 void sortOptimizedLast(type a[], int end, int begin = 0); // full sorting, iterative + optimization on end
 void sortOptimizedBoth(type a[], int end, int begin = 0); // full sorting, iterative + optimization on end and begin
 
-const int NUM_ALGORITHMS = 6; // # of algorithms
+const int NUM_COMPARE = 6; // # of algorithms
 
 // basic sorting test
 void test(type v[], int dim, int which);
@@ -61,7 +61,7 @@ void test(type v[], int dim, int which);
 int main(int argc, char *argv[])
 {
     srand(time(nullptr));
-    int dim = 10;
+    int dim = 20;
     type v[dim], a[dim];
 
     cout << "Test with random array" << endl;
@@ -69,7 +69,7 @@ int main(int argc, char *argv[])
     JSON(a, dim);
     cout << " ordinato: " << (isOrdered(a, dim) ? "si' " : "no ");
     showOperations();
-    for (int algo = 1; algo <= NUM_ALGORITHMS; ++algo)
+    for (int algo = 1; algo <= NUM_COMPARE; ++algo)
     {
         copia(a, v, dim); // make a copy
         test(v, dim, algo);
@@ -81,7 +81,7 @@ int main(int argc, char *argv[])
     JSON(a, dim);
     cout << " ordinato: " << (isOrdered(a, dim) ? "si' " : "no ");
     showOperations();
-    for (int algo = 1; algo <= NUM_ALGORITHMS; ++algo)
+    for (int algo = 1; algo <= NUM_COMPARE; ++algo)
     {
         copia(a, v, dim); // make a copy
         test(v, dim, algo);
@@ -93,7 +93,7 @@ int main(int argc, char *argv[])
     JSON(a, dim);
     cout << " ordinato: " << (isOrdered(a, dim) ? "si' " : "no ");
     showOperations();
-    for (int algo = 1; algo <= NUM_ALGORITHMS; ++algo)
+    for (int algo = 1; algo <= NUM_COMPARE; ++algo)
     {
         copia(a, v, dim); // make a copy
         test(v, dim, algo);
@@ -237,6 +237,7 @@ void sortOptimizedLast(type a[], int end, int begin /* = 0 */)
 /// @param begin inizio (incluso) della scansione: a[begin] e' il primo elemento elaborato
 void sortOptimizedBoth(type a[], int end, int begin /* = 0 */)
 {
+    int limit = begin;      // remember array start limit
     while (end - begin > 1) // at least two element
     {
         int lastSwap = 0, firstChanged = end;
@@ -252,8 +253,8 @@ void sortOptimizedBoth(type a[], int end, int begin /* = 0 */)
                 }
             }
         }
-        end = lastSwap;                                              // Let's start again with end decreased
-        begin = firstChanged == 0 ? firstChanged : firstChanged - 1; // starting with the first possibly changed test
+        end = lastSwap;                                                    // Let's start again with end decreased
+        begin = firstChanged == limit ? firstChanged : (firstChanged - 1); // starting with the first possibly changed test
     }
 }
 
