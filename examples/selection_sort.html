@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+	<title>Selection sort</title>
+	<meta charset="UTF-8">
+	<style>
+		div {
+			width: 100%;
+			border: 3px ridge gray;
+		}
+
+		div span {
+			display: inline-block;
+			text-align: center;
+			width: 10%;
+		}
+
+		th {
+			width: 10%;
+		}
+
+		th:last-child {
+			width: 80%;
+		}
+
+		meter {
+			width: 80%;
+			background: none;
+		}
+
+		#view table {
+			width: 100%;
+			border: 3px ridge black;
+		}
+
+		.selected {
+			border: 3px ridge green;
+		}
+
+		.ordered {
+			background-color: green;
+		}
+
+		.checking {
+			background-color: red;
+		}
+
+		.swapping {
+			background-color: yellow;
+		}
+
+		.bestSoFar {
+			background-color: lightblue;
+		}
+
+		.executing {
+			background-color: red;
+		}
+
+		progress {
+			width: 100%;
+		}
+
+		pre {
+			margin: 0;
+		}
+
+		#controls table {
+			width: 100%;
+		}
+
+		#controls table td.p5 {
+			width: 5%;
+		}
+
+		#controls table td.p10 {
+			width: 10%;
+		}
+
+		#controls table td.p15 {
+			width: 15%;
+		}
+
+		#controls table td.p30 {
+			width: 30%;
+		}
+	</style>
+	<script>
+		let debug = false;//true;
+		let array;
+		let nElements;
+		let comparisons = 0;
+		let swaps = 0;
+		let stato = { state: "INIT", slotToFill: 0, slotToCheck: 0, bestSlot: 0 };
+		function enableControls(what) {
+			if (what) {
+				document.getElementById("view").style.visibility = "visible";
+				document.getElementById("controls").style.visibility = "visible";
+				document.getElementById("legenda").style.visibility = "visible";
+			}
+			document.getElementById("nElem").disabled = what;
+			document.getElementById("btnRandom").disabled = what;
+			document.getElementById("btnBest").disabled = what;
+			document.getElementById("btnWorst").disabled = what;
+			document.getElementById("btnStep").disabled = !what;
+			document.getElementById("btnAuto").disabled = !what;
+		}
+		function updateView() {
+			document.getElementById("comparisons").innerHTML = "" + comparisons;
+			document.getElementById("swaps").innerHTML = "" + swaps;
+			document.getElementById("status").innerHTML = "" + stato.state;
+			document.getElementById("progress").value = "" + stato.slotToFill;
+		}
+		function show() {
+			let data = "<div><table><thead><tr><th>Index</th><th>Value</th><th>Content</th></thead></table></div>";
+			for (let elem = 0; elem < nElements; elem++) {
+				data += "<div id=\"slot" + elem + "\"><span>" + elem + "</span><span id=\"value" + elem + "\">" + array[elem] + "</span>";
+				data += "<meter min=\"0\" max=\"" + nElements + "\" value=\"" + array[elem] + "\" id=\"bar" + elem + "\"></meter></div>";
+			}
+			document.getElementById("show").innerHTML = data;
+		}
+		function create(type) {
+			nElements = parseInt(document.getElementById("nElem").value);
+			array = new Array(nElements);
+			if (type == 2) {
+				array[0] = nElements;
+				for (let elem = 1; elem < nElements; elem++) {
+					array[elem] = elem;
+				}
+			} else {
+				for (let elem = 0; elem < nElements; elem++) {
+					array[elem] = elem + 1;
+				}
+			}
+			if (type == 0) {
+				// shuffle
+				let pos = nElements;
+				while (pos > 1) {
+					let chosen = Math.floor(Math.random() * pos);
+					pos--;
+					let temp = array[chosen];
+					array[chosen] = array[pos];
+					array[pos] = temp;
+				}
+			}
+			show();
+			stato = { state: "INIT", slotToFill: 0, slotToCheck: 0, bestSlot: 0 };
+			comparisons = 0;
+			swaps = 0;
+			document.getElementById("progress").max = "" + nElements - 1;
+			enableControls(true);
+			updateView();
+		}
+
+		function runIt() {
+			document.getElementById("btnStep").disabled = true;
+			document.getElementById("btnAuto").disabled = true;
+			doStep(true);
+		}
+
+		function doStep(auto) {
+			if (debug) alert(stato.state);
+			switch (stato.state) {
+				case "INIT":
+					stato.slotToFill = 0;
+					stato.slotToCheck = 0;
+					stato.bestSlot = 0;
+					stato.state = "SELECTING";
+					document.getElementById("mainLoop").className = "executing";
+					break;
+				case "SELECTING":
+					document.getElementById("mainLoop").className = "";
+					document.getElementById("swapping").className = "";
+					document.getElementById("initMin").className = "executing";
+					document.getElementById("slot" + stato.slotToFill).className = "selected";
+					stato.state = "STARTCHECKING";
+					break;
+				case "STARTCHECKING":
+					document.getElementById("initMin").className = "";
+					document.getElementById("searchLoop").className = "executing";
+					document.getElementById("slot" + stato.slotToFill).className = "bestSoFar selected";
+					stato.bestSlot = stato.slotToFill;
+					stato.slotToCheck = stato.slotToFill + 1;
+					stato.state = "CHECKING";
+					break;
+				case "CHECKING":
+					document.getElementById("searchLoop").className = "";
+					document.getElementById("update").className = "";
+					document.getElementById("check").className = "executing";
+					document.getElementById("slot" + stato.slotToCheck).className = "checking";
+					stato.state = "CHECKED";
+					break;
+				case "CHECKED":
+					document.getElementById("check").className = "";
+					document.getElementById("slot" + stato.slotToCheck).className = "";
+					if (array[stato.slotToCheck] < array[stato.bestSlot]) {
+						if (stato.bestSlot == stato.slotToFill) {
+							document.getElementById("slot" + stato.bestSlot).className = "selected";
+						} else {
+							document.getElementById("slot" + stato.bestSlot).className = "";
+						}
+						stato.bestSlot = stato.slotToCheck;
+						document.getElementById("update").className = "executing";
+						document.getElementById("slot" + stato.bestSlot).className = "bestSoFar";
+					}
+					comparisons++;
+					stato.slotToCheck++;
+					if (stato.slotToCheck == nElements) {
+						stato.state = "FOUND";
+					} else {
+						stato.state = "CHECKING";
+					}
+					break;
+				case "FOUND":
+					document.getElementById("update").className = "";
+					document.getElementById("ifSwap").className = "executing";
+					document.getElementById("slot" + stato.slotToFill).className = "swapping";
+					document.getElementById("slot" + stato.bestSlot).className = "swapping";
+					stato.state = "SWAPPING";
+					break;
+				case "SWAPPING":
+					document.getElementById("ifSwap").className = "";
+					document.getElementById("slot" + stato.slotToFill).className = "";
+					document.getElementById("slot" + stato.bestSlot).className = "";
+					if (stato.slotToFill != stato.bestSlot) {
+						let temp = array[stato.slotToFill];
+						array[stato.slotToFill] = array[stato.bestSlot];
+						array[stato.bestSlot] = temp;
+						document.getElementById("swapping").className = "executing";
+						document.getElementById("value" + stato.slotToFill).innerHTML = "" + array[stato.slotToFill];
+						document.getElementById("bar" + stato.slotToFill).value = "" + array[stato.slotToFill];
+						document.getElementById("value" + stato.bestSlot).innerHTML = "" + array[stato.bestSlot];
+						document.getElementById("bar" + stato.bestSlot).value = "" + array[stato.bestSlot];
+						swaps++;
+					}
+					document.getElementById("slot" + stato.slotToFill).className = "ordered";
+					stato.slotToFill++;
+					if (stato.slotToFill < nElements - 1) {
+						stato.state = "SELECTING";
+					} else {
+						stato.state = "DONE";
+						document.getElementById("slot" + (nElements - 1)).className = "ordered";
+						document.getElementById("mainLoop").className = "";
+						document.getElementById("swapping").className = "";
+						enableControls(false);
+					}
+					break;
+			}
+			updateView();
+			if (auto) {
+				let delay = document.getElementById("delay").value;
+				if (stato.state != "DONE") setTimeout(function () { doStep(true); }, delay);
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<form method="post">
+		<fieldset id="setup">
+			<legend>Simulation setup</legend>
+			<table>
+				<tbody>
+					<tr>
+						<td>
+							<label for="nElem">Numero elementi:</label>
+						</td>
+						<td>
+							<input class="required" type="number" name="nElem" id="nElem" min="2" max="25" value="6"
+								required>
+						</td>
+						<td>
+							<button type="button" id="btnRandom" onclick="create(0)">Random data</button>
+						</td>
+						<td>
+							<button type="button" id="btnBest" onclick="create(1)">Best Case</button>
+						</td>
+						<td>
+							<button type="button" id="btnWorst" onclick="create(2)">Worst Case</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</fieldset>
+		<fieldset id="codice">
+			<legend>Code</legend>
+			<div id="mainLoop"><code>for(int slot = 0; slot &lt; elementi; slot++) {</code></div>
+			<div id="initMin">
+				<pre><code>	int best = slot;</code></pre>
+			</div>
+			<div id="searchLoop">
+				<pre><code>	for(int check = slot + 1; check &lt; elementi; check++) {</code></pre>
+			</div>
+			<div id="check">
+				<pre><code>		if(array[best] &gt; array[check]) </code></pre>
+			</div>
+			<div id="update">
+				<pre><code>			best = check;</code></pre>
+			</div>
+			<div id="endSearch">
+				<pre><code>	}</code></pre>
+			</div>
+			<div id="ifSwap">
+				<pre><code>	if(best != slot)</code></pre>
+			</div>
+			<div id="swapping">
+				<pre><code>		swap(array[best], array[slot]);</code></pre>
+			</div>
+			<div id="endMain"><code>}</code></div>
+		</fieldset>
+		<fieldset id="view" style="visibility:hidden">
+			<legend>Simulation view</legend>
+			<div id="show">
+			</div>
+		</fieldset>
+		<fieldset id="controls" style="visibility:hidden">
+			<legend>Simulation controls</legend>
+			<table>
+				<tbody>
+					<tr>
+						<td class="p5"><button type="button" id="btnStep" onclick="doStep(false)">Step</button></td>
+						<td class="p5"><button type="button" id="btnAuto" onclick="runIt()">Run</button></td>
+						<td class="p15"><label for="delay">Delay:</label><input type="range" name="delay" id="delay"
+								value="200" min="0" max="1000"></td>
+						<td class="p10">Comparisons:</td>
+						<td class="p5" id="comparisons">0</td>
+						<td class="p5">Swaps:</td>
+						<td class="p5" id="swaps">0</td>
+						<td class="p5">Status:</td>
+						<td class="p10" id="status"></td>
+						<td class="p5">Progress:</td>
+						<td class="p30"><progress id="progress" max="20" value="0">Percentuale</progress></td>
+					</tr>
+				</tbody>
+			</table>
+		</fieldset>
+		<fieldset id="legenda" style="visibility:hidden">
+			<legend>Legenda</legend>
+			<div class="selected">Posizione selezionata per il minimo elemento tra i restanti (non ancora ordinati)
+			</div>
+			<div class="ordered">Elemento ordinato, in posizione definitiva</div>
+			<div class="checking">Elemento in fase di confronto per la ricerca del minimo</div>
+			<div class="swapping">Elementi in fase di scambio (tra quello occupante la posizione selezionata ed il
+				minimo)</div>
+			<div class="bestSoFar">Elemento minore trovato nell'attuale stato della ricerca</div>
+		</fieldset>
+	</form>
+</body>
+
+</html>

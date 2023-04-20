@@ -57,6 +57,8 @@ Here you will find all the examples provided during the course.
 | [fileIO.md](examples/fileIO.md)                           | File I/O examples (summary)                    |
 | [bubblesort](examples/bubblesort.cpp)                     | BubbleSort derivation and optimization         |
 | [bubblesort.html](examples/bubblesort.html)               | BubbleSort animation                           |
+| [selectionsort](examples/selectionsort.cpp)               | SelectionSort derivation and optimization      |
+| [selectionsort.html](examples/selectionsort.html)         | SelectionSort animation                        |
 
 ## Further information (approfondimenti)
 Here you will find further information if you want a deeper insight.
