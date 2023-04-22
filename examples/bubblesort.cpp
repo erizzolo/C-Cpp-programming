@@ -53,7 +53,7 @@ void sortOptimizedBool(type a[], int end, int begin = 0); // full sorting, itera
 void sortOptimizedLast(type a[], int end, int begin = 0); // full sorting, iterative + optimization on end
 void sortOptimizedBoth(type a[], int end, int begin = 0); // full sorting, iterative + optimization on end and begin
 
-const int NUM_COMPARE = 6; // # of algorithms
+const int NUM_ALGORITHMS = 6; // # of algorithms
 
 // basic sorting test
 void test(type v[], int dim, int which);
@@ -69,7 +69,7 @@ int main(int argc, char *argv[])
     JSON(a, dim);
     cout << " ordinato: " << (isOrdered(a, dim) ? "si' " : "no ");
     showOperations();
-    for (int algo = 1; algo <= NUM_COMPARE; ++algo)
+    for (int algo = 1; algo <= NUM_ALGORITHMS; ++algo)
     {
         copia(a, v, dim); // make a copy
         test(v, dim, algo);
@@ -81,7 +81,7 @@ int main(int argc, char *argv[])
     JSON(a, dim);
     cout << " ordinato: " << (isOrdered(a, dim) ? "si' " : "no ");
     showOperations();
-    for (int algo = 1; algo <= NUM_COMPARE; ++algo)
+    for (int algo = 1; algo <= NUM_ALGORITHMS; ++algo)
     {
         copia(a, v, dim); // make a copy
         test(v, dim, algo);
@@ -93,7 +93,7 @@ int main(int argc, char *argv[])
     JSON(a, dim);
     cout << " ordinato: " << (isOrdered(a, dim) ? "si' " : "no ");
     showOperations();
-    for (int algo = 1; algo <= NUM_COMPARE; ++algo)
+    for (int algo = 1; algo <= NUM_ALGORITHMS; ++algo)
     {
         copia(a, v, dim); // make a copy
         test(v, dim, algo);

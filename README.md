@@ -112,6 +112,9 @@ Here you will find *some* of the exercises assigned during the course and *proba
 | [geometry](exercises/geometry.md)                         | [here](solutions/geometry.cpp) & [here](solutions/geometry.h) |
 | [calc](exercises/calc.md)                                 | [here](solutions/calc.cpp)                                    |
 | [book](exercises/book.md)                                 | [here](solutions/book.cpp)                                    |
+| [teams](exercises/teams.md)                               | [here](solutions/teams.cpp)                                   |
+| [teamsavg](exercises/teamsavg.md)                         | [here](solutions/teamsavg.cpp)                                |
+| [teamsord](exercises/teamsord.md)                         | [here](solutions/teamsord.cpp)                                |
 
 ## List of solutions of lab tests
 Here you will find *some* of the lab test solutions.
