@@ -60,6 +60,8 @@ Here you will find all the examples provided during the course.
 | [bubblesortmore](examples/bubblesortmore.cpp)             | BubbleSort with struct and comparison functions |
 | [selectionsort](examples/selectionsort.cpp)               | SelectionSort derivation and optimization       |
 | [selectionsort.html](examples/selectionsort.html)         | SelectionSort animation                         |
+| [quicksort](examples/quicksort.cpp)                       | QuickSort example                               |
+| [sortcomparison](examples/sortcomparison.cpp)             | Comparison of different sort algorithms         |
 
 ## Further information (approfondimenti)
 Here you will find further information if you want a deeper insight.

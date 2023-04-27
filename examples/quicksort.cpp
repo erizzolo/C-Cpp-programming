@@ -128,9 +128,9 @@ int main(int argc, char *argv[])
     cout << "start with randomly ordered planets:" << endl;
     JSON(v, numPlanets);
     cout << endl;
-    // Since the sorting algorithm is stable, we can do
+    // Since the sorting algorithm is NOT stable, we CANNOT do
     // sorting with multiple criteria in reverse order of importance
-    cout << "Since the sorting algorithm is stable, we can do" << endl;
+    cout << "Since the sorting algorithm is NOT stable, we CANNOT do" << endl;
     cout << "sorting with multiple criteria in reverse order of importance" << endl;
     quickSort(v, numPlanets, 0, lessThan); // just in case of equal number of satellites
     quickSort(v, numPlanets, 0, lessThanBySatellites);
@@ -182,11 +182,11 @@ void quickSort(type a[], int end, int begin /* = 0 */, bool lessBy(const type &,
     if (end - begin > 1) // at least two element
     {
         // partition
-        size_t left = partition(a, end, begin, lessBy);
+        size_t pivot = partition(a, end, begin, lessBy);
         // recurse lower part
-        quickSort(a, left, begin, lessBy);
+        quickSort(a, pivot, begin, lessBy);
         // recurse higher part
-        quickSort(a, end, left + 1, lessBy);
+        quickSort(a, end, pivot + 1, lessBy);
     }
 }
 
