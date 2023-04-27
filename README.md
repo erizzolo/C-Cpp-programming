@@ -21,44 +21,45 @@ Other tools:
 Here you will find all the examples provided during the course.
 
 **Feel absolutely free to make them part of your work.**
-| example                                                   | topic                                          |
-| --------------------------------------------------------- | ---------------------------------------------- |
-| [test.c](examples/test.c)                                 | a program to test your development environment |
-| [base.c](examples/base.c)                                 | basic program                                  |
-| [vars.c](examples/vars.c)                                 | basic variable declarations and usage          |
-| [out.c](examples/out.c)                                   | basic output to stdout                         |
-| [in.c](examples/in.c)                                     | basic input from stdin                         |
-| [io.cpp](examples/io.cpp)                                 | I/O using iostream from stdin                  |
-| [selezione_if.c](examples/selezione_if.c)                 | if - else                                      |
-| [selezione_switch.c](examples/selezione_switch.c)         | switch                                         |
-| [loops_while.c](examples/loops_while.c)                   | loops: while                                   |
-| [loops_do-while.c](examples/loops_do-while.c)             | loops: do-while                                |
-| [loops_for.c](examples/loops_for.c)                       | loops: for                                     |
-| [data.c](examples/data.c)                                 | do-while used to read and check a date         |
-| [functions.cpp](examples/functions.cpp)                   | Esempio di functions in C++                    |
-| [MCDfunctions.c](examples/MCDFunctions.c)                 | Esempio di functions in C                      |
-| [array.cpp](examples/array.cpp)                           | arrays: basic declaration and initialization   |
-| [array_basic.cpp](examples/array_basic.cpp)               | arrays: basic scan forward and backward        |
-| [array_utils.cpp](examples/array_utils.cpp)               | arrays: utility functions                      |
-| [pseudorandom.cpp](examples/pseudorandom.cpp)             | (pseudo)random numbers                         |
-| [cstring.cpp](examples/cstring.cpp)                       | C-style strings of chars                       |
-| [string_utils.cpp](examples/string_utils.cpp)             | C-style string functions                       |
-| [struct.cpp](examples/struct.cpp)                         | structs                                        |
-| [ds_intro.md](examples/ds_intro.md)                       | Introduction to data structures                |
-| [data_structures.md](examples/data_structures.md)         | Dynamic and static data structures (summary)   |
-| [recursive](examples/recursive.cpp)                       | Recursive functions                            |
-| [recursive products](examples/recursiveProduct.cpp)       | Recursive product                              |
-| [array_vs_struct](examples/array_vs_struct.cpp)           | array vs struct comparison                     |
-| [alloc_C](examples/alloc_C.c)                             | memory allocation C-style                      |
-| [alloc_Cpp](examples/alloc_Cpp.cpp)                       | memory allocation C++ using C-style            |
-| [alloc_Cpp_new_delete](examples/alloc_Cpp_new_delete.cpp) | memory allocation C++-style                    |
-| [args](examples/args.cpp)                                 | command line arguments                         |
-| [average](examples/average.cpp)                           | average of command line arguments              |
-| [fileIO.md](examples/fileIO.md)                           | File I/O examples (summary)                    |
-| [bubblesort](examples/bubblesort.cpp)                     | BubbleSort derivation and optimization         |
-| [bubblesort.html](examples/bubblesort.html)               | BubbleSort animation                           |
-| [selectionsort](examples/selectionsort.cpp)               | SelectionSort derivation and optimization      |
-| [selectionsort.html](examples/selectionsort.html)         | SelectionSort animation                        |
+| example                                                   | topic                                           |
+| --------------------------------------------------------- | ----------------------------------------------- |
+| [test.c](examples/test.c)                                 | a program to test your development environment  |
+| [base.c](examples/base.c)                                 | basic program                                   |
+| [vars.c](examples/vars.c)                                 | basic variable declarations and usage           |
+| [out.c](examples/out.c)                                   | basic output to stdout                          |
+| [in.c](examples/in.c)                                     | basic input from stdin                          |
+| [io.cpp](examples/io.cpp)                                 | I/O using iostream from stdin                   |
+| [selezione_if.c](examples/selezione_if.c)                 | if - else                                       |
+| [selezione_switch.c](examples/selezione_switch.c)         | switch                                          |
+| [loops_while.c](examples/loops_while.c)                   | loops: while                                    |
+| [loops_do-while.c](examples/loops_do-while.c)             | loops: do-while                                 |
+| [loops_for.c](examples/loops_for.c)                       | loops: for                                      |
+| [data.c](examples/data.c)                                 | do-while used to read and check a date          |
+| [functions.cpp](examples/functions.cpp)                   | Esempio di functions in C++                     |
+| [MCDfunctions.c](examples/MCDFunctions.c)                 | Esempio di functions in C                       |
+| [array.cpp](examples/array.cpp)                           | arrays: basic declaration and initialization    |
+| [array_basic.cpp](examples/array_basic.cpp)               | arrays: basic scan forward and backward         |
+| [array_utils.cpp](examples/array_utils.cpp)               | arrays: utility functions                       |
+| [pseudorandom.cpp](examples/pseudorandom.cpp)             | (pseudo)random numbers                          |
+| [cstring.cpp](examples/cstring.cpp)                       | C-style strings of chars                        |
+| [string_utils.cpp](examples/string_utils.cpp)             | C-style string functions                        |
+| [struct.cpp](examples/struct.cpp)                         | structs                                         |
+| [ds_intro.md](examples/ds_intro.md)                       | Introduction to data structures                 |
+| [data_structures.md](examples/data_structures.md)         | Dynamic and static data structures (summary)    |
+| [recursive](examples/recursive.cpp)                       | Recursive functions                             |
+| [recursive products](examples/recursiveProduct.cpp)       | Recursive product                               |
+| [array_vs_struct](examples/array_vs_struct.cpp)           | array vs struct comparison                      |
+| [alloc_C](examples/alloc_C.c)                             | memory allocation C-style                       |
+| [alloc_Cpp](examples/alloc_Cpp.cpp)                       | memory allocation C++ using C-style             |
+| [alloc_Cpp_new_delete](examples/alloc_Cpp_new_delete.cpp) | memory allocation C++-style                     |
+| [args](examples/args.cpp)                                 | command line arguments                          |
+| [average](examples/average.cpp)                           | average of command line arguments               |
+| [fileIO.md](examples/fileIO.md)                           | File I/O examples (summary)                     |
+| [bubblesort](examples/bubblesort.cpp)                     | BubbleSort derivation and optimization          |
+| [bubblesort.html](examples/bubblesort.html)               | BubbleSort animation                            |
+| [bubblesortmore](examples/bubblesortmore.cpp)             | BubbleSort with struct and comparison functions |
+| [selectionsort](examples/selectionsort.cpp)               | SelectionSort derivation and optimization       |
+| [selectionsort.html](examples/selectionsort.html)         | SelectionSort animation                         |
 
 ## Further information (approfondimenti)
 Here you will find further information if you want a deeper insight.
