@@ -151,4 +151,9 @@ The text of the problem is inside the source file.
 * [password.cpp](tests/password.cpp)
 * [planet.cpp](tests/planet.cpp)
 * [menu.cpp](tests/menu.cpp)
+* [contaEscludi.cpp](tests/contaEscludi.cpp)
+* [primesums.cpp](tests/primesums.cpp)
+* [compositesums.cpp](tests/compositesums.cpp)
+* [fibosums.cpp](tests/fibosums.cpp)
+* [dots.cpp](tests/dots.cpp)
 
