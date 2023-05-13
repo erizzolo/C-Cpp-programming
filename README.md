@@ -120,6 +120,8 @@ Here you will find *some* of the exercises assigned during the course and *proba
 | [classi](exercises/classi.md)                             | [here](solutions/classi.cpp)                                                                                  |
 | [classiSoddisfatte](exercises/classiSoddisfatte.md)       | [here](solutions/classiSoddisfatte.cpp)                                                                       |
 | [sumint](exercises/sumint.md)                             | [here(TE)](solutions/sumintTE.cpp), [here(ME)](solutions/sumintME.cpp) and [here(ok)](solutions/sumintOK.cpp) |
+| [config](exercises/config.md)                             | [here](solutions/config.cpp)                                                                                  |
+| [championship](exercises/championship.md)                 | [here](solutions/championship.cpp)                                                                            |
 
 ## List of solutions of lab tests
 Here you will find *some* of the lab test solutions.
