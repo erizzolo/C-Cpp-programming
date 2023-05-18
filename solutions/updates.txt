@@ -1,0 +1,3 @@
+/ancora:B
+=ancora:C Nei vecchi orologi, parte dello scappamento... [omissis]
++ancora:D Nel linguaggio HTML, elemento che... [omissis]
