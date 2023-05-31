@@ -123,6 +123,7 @@ Here you will find *some* of the exercises assigned during the course and *proba
 | [config](exercises/config.md)                             | [here](solutions/config.cpp)                                                                                  |
 | [championship](exercises/championship.md)                 | [here](solutions/championship.cpp)                                                                            |
 | [aggiorna](exercises/aggiorna.md)                         | [here](solutions/aggiorna.cpp)                                                                                |
+| [friends](exercises/friends.md)                           | [here](solutions/friends.cpp)                                                                                 |
 
 ## List of solutions of lab tests
 Here you will find *some* of the lab test solutions.
