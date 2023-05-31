@@ -1,0 +1,7 @@
+1,PD,"abano terme",,A001,028.001,1.5.54..1.
+2,LO,"abbadia cerreto",,A004,098.001,1.3.99..1.
+3,LC,"abbadia lariana",,A005,097.001,1.3.98..1.
+4,SI,"abbadia san salvatore	",,A006,052.001,.9.75..1.
+5,OR,"abbasanta",,A007,095.001,42..95..1.
+6,PE,"abbateggio",,A008,068.001,313.6...1.
+7,MI,"abbiategrasso",,A010,015.002,1.3.49..2.

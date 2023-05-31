@@ -3,7 +3,9 @@
 	Author:     Emanuele Rizzolo
 	Class:      3XIN
 	Date:       2023/04/21
-	Note:
+	Note:		There is probably no way to keep within time limits
+				with an O(n*n) algorithm like bubble sort...
+				Much better with library sort(...)
 */
 /*
 	Teams forever (teamsord)
@@ -34,6 +36,7 @@
 
 // directive for standard io functions
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
@@ -53,6 +56,11 @@ struct posizione
 
 // ordinamento
 void bubbleSort(posizione a[], int end, int begin = 0);
+bool lessThan(const posizione &lhs, const posizione &rhs)
+{
+	return lhs.punti > rhs.punti ||
+		   (lhs.punti == rhs.punti && lhs.squadra < rhs.squadra);
+}
 
 int main(int argc, char *argv[])
 {
@@ -76,7 +84,8 @@ int main(int argc, char *argv[])
 		classifica[squadra].punti += punti;
 	}
 	// order teams by points
-	bubbleSort(classifica, nSquadre, 0);
+	// bubbleSort(classifica, nSquadre, 0);	// time exceeded ,,,
+	sort(classifica, classifica + nSquadre, lessThan);
 	// write team and points
 	for (int squadra = 0; squadra < nSquadre; squadra++)
 	{

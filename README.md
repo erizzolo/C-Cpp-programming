@@ -159,4 +159,12 @@ The text of the problem is inside the source file.
 * [compositesums.cpp](tests/compositesums.cpp)
 * [fibosums.cpp](tests/fibosums.cpp)
 * [dots.cpp](tests/dots.cpp)
-
+* [next.cpp](tests/next.cpp)
+* [previous.cpp](tests/previous.cpp)
+* [fusion.cpp](tests/fusion.cpp)
+* [sums.cpp](tests/sums.cpp)
+* [comuniA.cpp](tests/comuniA.cpp)
+* [comuniB.cpp](tests/comuniB.cpp)
+* [codiciA.cpp](tests/codiciA.cpp)
+* [codiciB.cpp](tests/codiciB.cpp)
+ 

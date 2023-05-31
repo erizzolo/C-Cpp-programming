@@ -272,7 +272,7 @@ bool decodeEntry(char *line, entry_t &entry) // decodes an entry from a string
 
 bool decodeUpdate(char *line, update_t &update) // decodes an update from a string
 {
-    if (strchr(VALID_OPERATIONS, line[0]) == nullptr) // inalid operation
+    if (strchr(VALID_OPERATIONS, line[0]) == nullptr) // invalid operation
         return false;
     update.operation = line[0]; // store operation to update
     return (update.operation == DELETE && decodeWordAndScope(line + 1, update.entry)) ||
