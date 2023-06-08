@@ -62,6 +62,7 @@ Here you will find all the examples provided during the course.
 | [selectionsort.html](examples/selectionsort.html)         | SelectionSort animation                         |
 | [quicksort](examples/quicksort.cpp)                       | QuickSort example                               |
 | [sortcomparison](examples/sortcomparison.cpp)             | Comparison of different sort algorithms         |
+| [countsort](examples/sortTop1000EW.cpp)                   | Examples of count sort                          |
 
 ## Further information (approfondimenti)
 Here you will find further information if you want a deeper insight.
